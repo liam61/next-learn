@@ -1,0 +1,42 @@
+$orange: #ffb142;
+
+.page-home {
+  .main {
+    .title {
+      color: $orange;
+    }
+  }
+
+  .flex {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    &-item {
+      margin-right: 8px;
+      padding: 8px 6px;
+      border: 1px solid $orange;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .user-list {
+    display: flex;
+    width: 300px;
+    margin: 0 auto;
+    flex-direction: column;
+
+    &-item {
+      padding: 5px 0;
+      border: 1px solid #000;
+      border-bottom-width: 0;
+
+      &:last-child {
+        border-bottom-width: 1px;
+      }
+    }
+  }
+}
