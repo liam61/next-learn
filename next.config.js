@@ -1,12 +1,15 @@
+const path = require('path');
 const withPlugins = require('next-compose-plugins');
 const withCss = require('@zeit/next-css');
 const withSass = require('@zeit/next-sass');
 const withLess = require('@zeit/next-less');
+const withReactSvg = require('next-react-svg');
 
-module.exports = withPlugins([withSass, withLess, withCss], {
+module.exports = withPlugins([withSass, withLess, withCss, withReactSvg], {
   lessLoaderOptions: {
     javascriptEnabled: true,
   },
+  include: path.resolve(__dirname, 'assets/images'),
   webpack: (config, { isServer }) => {
     if (isServer) {
       // const antStyles = /antd\/.*?\/style\/css.*?/;

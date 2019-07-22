@@ -3,3 +3,9 @@ export interface IUser {
   name: string;
   gender: 'male' | 'female';
 }
+
+export interface IGoods {
+  id: string;
+  name: string;
+  desc: string;
+}

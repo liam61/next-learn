@@ -1,0 +1,35 @@
+$prefixCls: 'page-mobx';
+
+$info: #2dbe8a;
+
+.#{$prefixCls} {
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  .goods-wrapper {
+    text-align: center;
+
+    ul {
+      width: 300px;
+      padding: 0;
+      margin: 0 auto 10px;
+      background: $info;
+      border-radius: 5px;
+
+      li {
+        list-style: none;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.loading {
+  text-align: center;
+  margin-top: 50px;
+}

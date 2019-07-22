@@ -35,7 +35,7 @@ function Home({ data }) {
 }
 
 Home.getInitialProps = async ({ req, res }) => {
-  console.log('index page request url: ' + req.url);
+  // console.log('index page request url: ' + req.url);
   await wait();
 
   return {

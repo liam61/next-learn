@@ -78,6 +78,7 @@ export default class Example extends Component {
               margin-bottom: 3px;
               padding: 10px 0;
               text-align: center;
+              font-size: 16px;
               background: #2e61c8;
               color: #fff;
             }
