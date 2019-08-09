@@ -1,28 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { inject, observer, Provider } from 'mobx-react';
 import { configure } from 'mobx';
 import { autobind } from 'core-decorators';
-import Store from './store';
-import Action from './action';
+import Store from '../../store/store';
+import Action from '../../store/action';
 import { Button, Spin } from 'antd';
 
 import './index.scss';
 
 import SuccessIcon from '../../assets/images/success.svg';
 
-configure({ enforceActions: true });
+configure({ enforceActions: 'always' });
 
-const store = new Store();
-const action = new Action(store);
+const rootStore = new Store();
+const rootAction = new Action(rootStore);
 
 interface IProps extends Partial<{ store: Store; action: Action }> {
   prefixCls?: string;
 }
 
-@inject('store')
+@inject('store', 'action')
 @observer
 @autobind
-class Mobx extends React.Component<IProps, {}> {
+class Mobx extends Component<IProps, {}> {
   static defaultProps = {
     prefixCls: 'page-mobx',
   };
@@ -65,7 +65,7 @@ class Mobx extends React.Component<IProps, {}> {
 }
 
 export default observer(() => (
-  <Provider store={store}>
-    <Mobx action={action} />
+  <Provider store={rootStore} action={rootAction}>
+    <Mobx />
   </Provider>
 ));

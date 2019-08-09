@@ -1,5 +1,5 @@
 import { action, observable } from 'mobx';
-import { IGoods } from '../../interfaces';
+import { IGoods } from '../interfaces';
 
 export default class MobxStore {
   @observable

@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { wait } from '../common';
@@ -17,6 +18,10 @@ function Home({ data }) {
         <div className="blue">this is {data.name}, with scss</div>
         <Link href="/example">
           <a>to example Page</a>
+        </Link>
+        <br />
+        <Link href="/mobx">
+          <a>to mobx Page</a>
         </Link>
         <div className="flex">
           <span className="flex-item">a flex item</span>

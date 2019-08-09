@@ -12,7 +12,6 @@ module.exports = withPlugins([withSass, withLess, withCss, withReactSvg], {
   include: path.resolve(__dirname, 'assets/images'),
   webpack: (config, { isServer }) => {
     if (isServer) {
-      // const antStyles = /antd\/.*?\/style\/css.*?/;
       const antStyles = /antd\/.*?\/style.*?/;
       const origExternals = [...config.externals];
       config.externals = [

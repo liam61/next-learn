@@ -1,4 +1,4 @@
-import { getGoods } from '../../common';
+import { getGoods } from '../common';
 import Store from './store';
 
 export default class MobxAction {
