@@ -16,7 +16,7 @@ function Home({ data }) {
       <div className="main">
         <h1 className="title">Welcome to Next.js!</h1>
         <div className="blue">this is {data.name}, with scss</div>
-        <div>add webhook</div>
+        <div>add webhooks</div>
         <Link href="/example">
           <a>to example Page</a>
         </Link>
